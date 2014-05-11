@@ -1,1 +1,16 @@
-<h1>Hello World</h1>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Bloggr</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li>
+      {{link-to 'Posts' 'posts'}}
+    </li>
+    <li>
+      {{link-to 'About' 'about'}}
+    </li>
+  </ul>
+</nav>
+
+{{outlet}}
