@@ -1,0 +1,32 @@
+{{#if isEditing}}
+
+	<p class="form-group">
+		{{input class="form-control" type="text" value=title}}
+	</p>
+	<p class="form-group">
+		{{input class="form-control" type="text" value=excerpt}}
+	</p>
+	<p class="form-group">
+		{{textarea class="form-control" value=body rows="6"}}
+	</p>
+  <button class="btn btn-success" {{action 'doneEditing'}}>
+    <span class="glyphicon glyphicon-save"></span> Done
+  </button>
+{{else}}
+  <button class="btn btn-primary" {{action 'edit'}}>
+    <span class="glyphicon glyphicon-pencil"></span> Edit
+  </button>
+{{/if}}
+
+<h1>{{title}}</h1>
+<h2>by {{author.name}} <small class='muted'>({{date}})</small></h2>
+
+<hr>
+
+<div class='intro'>
+  {{excerpt}}
+</div>
+
+<div class='below-the-fold'>
+  {{body}}
+</div>
